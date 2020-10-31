@@ -12,18 +12,30 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="u-clearfix ">
-            <div class="logo">
-              <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">
-                <h2>KA Django playground</h2>
-              </a>
-            </div>
-            <div class="release-notes">
-              <p>View <a href="https://docs.djangoproject.com/en/3.1/releases/" target="_blank" rel="noopener">release notes</a> for Django 3.1</p>
-            </div>
-        </header>
+        <div class="grid-container">
+            <header class="grid-item grid-header">
+                <div class="">
+                  <a href="/">
+                    <h4>KA Django playground</h4>
+                  </a>
+                </div>
+                <div class="release-notes">
+                </div>
+            </header>
+    
+            <main class="grid-item grid-body">
+                {% block content %}
+                {% endblock %}
+            </main>
+            <footer class="grid-item grid-footer">
+                {% block footer %}
+                {% endblock %}
+            </footer>
+        </div>
+
     </div>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
